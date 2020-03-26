@@ -6,11 +6,11 @@ class CatsController < ApplicationController
 
     def create
       cat = Cat.create(cat_params)
-    if cat.valid?
-        render json: cat
-    else
-         render json: cat.errors, status: :unprocessable_entity
-    end
+        if cat.valid?
+            render json: cat
+        else
+             render json: cat.errors, status: :unprocessable_entity
+        end
     end
     
     # Handle strong parameters, so we are secure
