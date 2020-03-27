@@ -31,5 +31,6 @@ module CatTinerBackend
 
     # Don't generate system test files.
     config.generators.system_tests = nil
+    config.hosts << "2bda5a6f622d46c684f6cee4ff9830da.vfs.cloud9.us-east-2.amazonaws.com"
   end
 end
